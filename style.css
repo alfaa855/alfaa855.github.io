@@ -1,11 +1,11 @@
 body {
-  background-color= navy;
+  background-color: lightblue;
 }
 h1 {
-  font-family= times new roman, sans-sherif;
-  text-align = center;
+  font-family: times new roman, sans-sherif;
+  text-align : center;
 }
 h2 {
-  font-family = times new roman, sans-serif;
-  text-align = center;
+  font-family : times-new-roman, sans-serif;
+  text-align : center;
 }
