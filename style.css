@@ -1,11 +1,11 @@
 body {
-  background-image: linear-gradient(to right, #87CEEB, #E0F7FA);
-}
+  background: 
 h1 {
   font-family: times new roman, sans-sherif;
-  text-align : center;
+  text-align: center;
 }
 h2 {
- font-family : times new roman, sans-serif;
-  text-align : center;
+  font-family: times new roman, sans-serif;
+  text-align: center;
 }
+ 
