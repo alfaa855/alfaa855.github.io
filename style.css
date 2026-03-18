@@ -12,11 +12,6 @@ nav ul {
 }
 nav li {
   display: inline-block;
-  cursor: pointer;
-  padding: 10px 20px;
-  margin: 20px;
-  color:white;
-  background-color: black;
 }
 
 nav a {
@@ -25,6 +20,9 @@ nav a {
   padding: 10px 20px;
   margin: 10px;
   color: white;
+  backgroound-color: #34495E;
+  text-decoration: none;
+
 }
 
 nav a:hover{
