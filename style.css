@@ -1,12 +1,12 @@
 
 h1, h2, p {
-  font-family: times new roman, sans-serif;
+  font-family: "times new roman", sans-serif;
   text-align: center;
 }
 
 nav ul {
-  lisk-style-type: none;
-  backgroung-color: black;
+  list-style-type: none;
+  background-color: black;
   color: white;
   padding: 0px;
 }
@@ -20,7 +20,7 @@ nav li {
 }
 
 nav a {
-  dislay: inline-block;
+  display: inline-block;
   cursor: pointer;
   padding: 10px 20px;
   margin: 10px;
@@ -34,12 +34,12 @@ nav a:hover{
   
 
 .samping {
-  font-family: times new roman, sans-serif;
+  font-family: "times new roman", sans-serif;
   text-align: left;
 }
 
 .kanan {
-  font-family: times new roman;
+  font-family: "times new roman";
   text-align: right;
 }
 
@@ -51,6 +51,3 @@ a:visited {
   color: purple;
 }
 
-a:hover {
-  color: red;
-}
