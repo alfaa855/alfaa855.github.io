@@ -8,7 +8,7 @@ nav ul {
   list-style-type: none;  
   padding: 0;              
   text-align: center;      
-  background-color: #333;  
+  background-color: #34495E;
 }
 
 nav li {
@@ -17,13 +17,14 @@ nav li {
 
 nav a {
   display: inline-block;  
-  padding: 10px 20px;      
+  padding: 10px 20px;
+  margin: 8px;
   color: white;            
   text-decoration: none;   
 }
 
 nav a:hover {
-  background-color: #555;  /* 10 */
+  background-color: #555;  
 }
   
   
