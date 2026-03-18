@@ -4,6 +4,16 @@ h1, h2, p {
   text-align: center;
 }
 
+.samping {
+  font-family: times new roman, sans-serif;
+  text-align: left;
+}
+
+.kanan {
+  font-family: times new roman;
+  text-align: right;
+}
+
 a {
   color: blue;
 }
