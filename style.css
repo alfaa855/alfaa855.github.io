@@ -5,25 +5,25 @@ h1, h2, p {
 }
 
 nav ul {
-  list-style-type: none;
-  padding: 0px;
-  background-color: #34495E;
-  text-align: center;
+  list-style-type: none;  
+  padding: 0;              
+  text-align: center;      
+  background-color: #333;  
 }
+
 nav li {
-  display: inline-block;
+  display: inline-block;   
 }
 
 nav a {
-  display: inline-block;
-  padding: 10px 20px;
-  color: white;
-  text-decoration: none;
-
+  display: inline-block;  
+  padding: 10px 20px;      
+  color: white;            
+  text-decoration: none;   
 }
 
-nav a:hover{
-  color: #555;
+nav a:hover {
+  background-color: #555;  /* 10 */
 }
   
   
@@ -36,13 +36,5 @@ nav a:hover{
 .kanan {
   font-family: "times new roman";
   text-align: right;
-}
-
-a {
-  color: blue;
-}
-
-a:visited {
-  color: purple;
 }
 
