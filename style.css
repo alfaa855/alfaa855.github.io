@@ -6,9 +6,10 @@ h1, h2, p {
 
 nav ul {
   list-style-type: none;
-  background-color: black;
   color: white;
   padding: 0px;
+  background-color: #34495E;
+  text-align: center;
 }
 nav li {
   display: inline-block;
@@ -20,7 +21,6 @@ nav a {
   padding: 10px 20px;
   margin: 10px;
   color: white;
-  backgroound-color: #34495E;
   text-decoration: none;
 
 }
