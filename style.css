@@ -1,15 +1,9 @@
 
-h1 {
+h1, h2, p {
   font-family: times new roman, sans-serif;
   text-align: center;
 }
-h2 {
-  font-family: times new roman, sans-serif;
-  text-align: center;
-}
-p {
-  font-family: times new roman, sans-serif;
-}
+
 a {
   color: blue;
 }
