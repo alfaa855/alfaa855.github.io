@@ -4,6 +4,14 @@ h1, h2, p {
   text-align: center;
 }
 
+nav ul {
+  link-style-type: none;
+  dislay: inline-block;
+  backgroung-color: black;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px;
+
 .samping {
   font-family: times new roman, sans-serif;
   text-align: left;
