@@ -1,6 +1,9 @@
-#dina{ 
-  margin-left: 400px
-  width: 300;
+.foto{
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  max-width: 100%;
+  height: auto;
   
 }
   
