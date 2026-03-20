@@ -9,7 +9,7 @@
   align-item: center;
   flex-direction: column;
   width: 100%;
-  min-height: 109vh;
+  min-height: 100%
   background: linear-gradient(to right, #000428, #004e92);
   background-size: cover;
 }
