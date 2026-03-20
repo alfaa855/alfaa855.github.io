@@ -3,15 +3,18 @@
   padding: 0;
 }
 
+body{
+  overflow: hidden;
+  height: 100vh;
+}
 .main{
   display: flex;
   justify-content: center;
-  align-item: center;
+  align-items: center;
   flex-direction: column;
   width: 100%;
   min-height: 109vh;
   background: linear-gradient(to right, #000428, #004e92);
-  background-size: cover;
 }
 
 .navbar{
@@ -20,7 +23,7 @@
 }
 
 .icon{ 
-  width:0 auto;
+  width: auto;
   height: auto;
 }
 
