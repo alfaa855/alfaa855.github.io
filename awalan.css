@@ -4,32 +4,32 @@
 }
 
 .main{
+  display: flex;
+  justify-content: center;
+  align-item: center;
+  flex-direction: column;
   width: 100%;
-  min-height: 100vh;
+  min-height: 109vh;
   background: linear-gradient(to right, #000428, #004e92);
-
+  background-size: cover;
 }
 
 .navbar{
   width: 1200px;
-  height: 75px;
+  height: 60px;
 }
 
 .icon{ 
-  width: 2000px;
-  height: 70px;
+  width:0 auto;
+  height: auto;
 }
 
 .logo{
-  padding: 410px;
-  padding-top: 180px;
   font-family: "times new roman";
-  align-text: center;
+  text-align: center;
 }
 
-.button {
-  background: lienr
-}
+
 
 
 
