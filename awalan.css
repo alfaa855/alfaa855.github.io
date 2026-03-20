@@ -18,6 +18,10 @@ body{
   background: linear-gradient(to right, #000428, #004e92);
 }
 
+a {
+  text-decoration: none;
+}
+
 .navbar{
   width: 1200px;
   height: 60px;
