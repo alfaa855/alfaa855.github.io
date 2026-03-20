@@ -5,8 +5,9 @@
 
 .main{
   width: 100%;
+  min-height: 100vh;
   background: linear-gradient(to right, #000428, #004e92);
-  background-size: cover;
+
 }
 
 .navbar{
