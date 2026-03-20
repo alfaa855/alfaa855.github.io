@@ -1,4 +1,9 @@
-
+.foto{ 
+  justify-content: center;
+  width: 500;
+  justify-item: center;
+}
+  
 h1, h2, p {
   font-family: "times new roman", sans-serif;
   text-align: center;
