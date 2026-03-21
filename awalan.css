@@ -45,15 +45,6 @@ a {
   font-size: clamp(24px,8vw,72px);
 }
 
-@media(max-width: 400PX) {
-  .main{
-    width: 768px;
-  }
-  .logo{
-    font-size: 36px;
-  }
-}
-
 
 
 
