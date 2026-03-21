@@ -19,7 +19,7 @@ html,body{
   min-height: webkit-fill-avaiable;
   background: #ab41d1;
   background: linear-gradient(1deg, rgba(171, 65, 209, 1) 10%, rgba(181, 49, 214, 1) 19%, rgba(61, 174, 196, 1) 100%);
-  gap: 20px;
+  gap: 30px;
   row-gap: 45px;
 }
 
@@ -32,7 +32,6 @@ a {
   justify-content: center;
   align-items: center;
   height: auto;
-  padding: 0;
 }
 
 .icon{ 
@@ -53,7 +52,7 @@ a {
 }
 .in{
   font-family: "times new roman", sans-serif;
-  width: 200px;
+  width: 180px;
   height: 50px;
   border-radius: 20%;
   font-size:20px;
@@ -63,13 +62,14 @@ a {
 
 
 @media(orientation:potrait){
-  .in{
-    font-size:clamp(20px,6vw,48px);
+  .logo{
+    font-size:clamp(24px,7vw,48px);
+    
   }
 
   @media(orientation:landscape){
-  .in{
-     font-size: clamp(24px,8vw,72px);
+    .logo{
+      font-size: clamp(24px,8vw,72px);
     }
   
 
