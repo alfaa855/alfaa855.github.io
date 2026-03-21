@@ -3,18 +3,20 @@
   padding: 0;
 }
 
-body{
+html,body{
   overflow: hidden;
   position: fixed;
-  height: 100vh;
+  height: 100%;
+  width: 100%
 }
 .main{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 1200px;
-  min-height: 109vh;
+  width: 100vw;
+  height:100vh;
+  min-height: webkit-fill-avaiable;
   background: linear-gradient(to right, #000428, #004e92);
 }
 
