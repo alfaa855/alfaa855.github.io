@@ -60,7 +60,26 @@ a {
   border-radius: 20%;
   font-size:20px;
   border: none;
+  position: relative;
+  transition: all 1s cubic-bezier(0.5, 1, 1, 0.5);
   box-shadow: 0px 0px 10px 6px #B531D6;
+  z-index: 0;
+}
+
+.in::before {
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  content:'';
+  opacity:0;
+  border-radius: 20%;
+  background: linear-gradient(rgba(181, 49, 214, 1) 100%, rgba(171, 65, 209, 1) 30%);
+  transition: all 3s cubic-bezier(0.5, 1, 1, 0.5);
+  
+}
+
+.in:hover::before{
+  opacity:1;
 }
 
 /*untuk hp*/
