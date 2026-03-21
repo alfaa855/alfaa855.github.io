@@ -63,13 +63,13 @@ a {
 
 
 @media(orientation:potrait){
-  .logo{
+  .in{
     font-size:clamp(20px,6vw,48px);
   }
 
   @media(orientation:landscape){
-    .logo{
-      font-size: clamp(24px,8vw,72px);
+  .in{
+     font-size: clamp(24px,8vw,72px);
     }
   
 
