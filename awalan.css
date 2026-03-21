@@ -16,7 +16,7 @@ html,body{
   flex-direction: column;
   width: 100vw;
   height:100vh;
-  min-height: -webkit-fill-avaiable;
+  min-height: -webkit-fill-available;
   background: #ab41d1;
   background: linear-gradient(1deg, rgba(171, 65, 209, 1) 10%, rgba(181, 49, 214, 1) 19%, rgba(61, 174, 196, 1) 100%);
   row-gap: 45px;
