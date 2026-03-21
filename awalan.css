@@ -19,7 +19,6 @@ html,body{
   min-height: webkit-fill-avaiable;
   background: #ab41d1;
   background: linear-gradient(1deg, rgba(171, 65, 209, 1) 10%, rgba(181, 49, 214, 1) 19%, rgba(61, 174, 196, 1) 100%);
-  gap: 30px;
   row-gap: 45px;
 }
 
@@ -38,18 +37,22 @@ a {
   width: auto;
   height: auto;
 }
-
+/*pengendali tulisan website*/
 .logo{
   font-family: "times new roman";
   text-align: center;
+  height: 90px;
   color: white;
   font-size: clamp(24px,8vw,72px);
 }
+/*ini adalah pengendali tombol div*/
 .button {
   display:flex;
   align-items: center;
   justify-content: center;
+  height: 30px;
 }
+/*ini adalah pengendali button*/
 .in{
   font-family: "times new roman", sans-serif;
   width: 180px;
@@ -60,13 +63,13 @@ a {
   box-shadow: 0px 0px 10px 6px #B531D6;
 }
 
-
+/*untuk hp*/
 @media(orientation:potrait){
   .logo{
     font-size:clamp(24px,7vw,48px);
     
   }
-
+/*untuk desktop*/
   @media(orientation:landscape){
     .logo{
       font-size: clamp(24px,8vw,72px);
