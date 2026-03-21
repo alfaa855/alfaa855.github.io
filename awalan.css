@@ -16,7 +16,7 @@ html,body{
   flex-direction: column;
   width: 100vw;
   height:100vh;
-  min-height: webkit-fill-avaiable;
+  min-height: -webkit-fill-avaiable;
   background: #ab41d1;
   background: linear-gradient(1deg, rgba(171, 65, 209, 1) 10%, rgba(181, 49, 214, 1) 19%, rgba(61, 174, 196, 1) 100%);
   row-gap: 45px;
@@ -57,7 +57,7 @@ a {
   font-family: "times new roman", sans-serif;
   width: 180px;
   height: 50px;
-  border-radius: 20%;
+  border-radius: 20px;
   font-size:20px;
   border: none;
   position: relative;
@@ -72,7 +72,7 @@ a {
   z-index:-1;
   content:'';
   opacity:0;
-  border-radius: 20%;
+  border-radius: 20px;
   background: linear-gradient(rgba(181, 49, 214, 1) 100%, rgba(171, 65, 209, 1) 30%);
   transition: all 3s cubic-bezier(0.5, 1, 1, 0.5);
   
@@ -83,10 +83,9 @@ a {
 }
 
 /*untuk hp*/
-@media(orientation:potrait){
+@media(orientation:portrait){
   .logo{
     font-size:clamp(24px,7vw,48px);
-    
   }
 /*untuk desktop*/
   @media(orientation:landscape){
