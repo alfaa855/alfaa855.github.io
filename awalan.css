@@ -64,7 +64,7 @@ a {
 
 @media(orientation:potrait){
   .logo{
-    font-sizeL:clamp(20px,6vw,48px);
+    font-size:clamp(20px,6vw,48px);
   }
 
   @media(orientation:landscape){
