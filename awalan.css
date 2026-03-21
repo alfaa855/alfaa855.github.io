@@ -13,7 +13,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 1200px;
   min-height: 109vh;
   background: linear-gradient(to right, #000428, #004e92);
 }
@@ -23,8 +23,11 @@ a {
 }
 
 .navbar{
-  width: 1200px;
-  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 0;
 }
 
 .icon{ 
@@ -36,7 +39,16 @@ a {
   font-family: "times new roman";
   text-align: center;
   color: white;
-  font-size: 34px;
+  font-size: 72px;
+}
+
+@media(max-width: 768px) {
+  .main{
+    width: 100%;
+  }
+  .logo{
+    font-size: 36px;
+  }
 }
 
 
