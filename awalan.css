@@ -7,7 +7,7 @@ html,body{
   overflow: hidden;
   position: fixed;
   height: 100%;
-  width: 100%
+  width: 100%;
 }
 .main{
   display: flex;
@@ -86,12 +86,12 @@ a {
 @media(orientation:portrait){
   .logo{
     font-size:clamp(24px,7vw,48px);
-  }
+  }}
 /*untuk desktop*/
   @media(orientation:landscape){
     .logo{
       font-size: clamp(24px,8vw,72px);
-    }
+    }}
   
 
   
