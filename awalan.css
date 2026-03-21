@@ -45,6 +45,18 @@ a {
   font-size: clamp(24px,8vw,72px);
 }
 
+@media(orientation:potrait){
+  .logo{
+    font-sizeL:clamp(20px,6vw,48px);
+  }
+
+  @media(orientation:landscape){
+    .logo{
+      font-size: clamp(24px,8vw,72px);
+    }
+  
+
+  
 
 
 
