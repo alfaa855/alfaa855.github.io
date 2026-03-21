@@ -20,6 +20,7 @@ html,body{
   background: #ab41d1;
   background: linear-gradient(1deg, rgba(171, 65, 209, 1) 10%, rgba(181, 49, 214, 1) 19%, rgba(61, 174, 196, 1) 100%);
   gap: 20px;
+  row-gap: 45px;
 }
 
 a {
@@ -51,6 +52,7 @@ a {
   justify-content: center;
 }
 .in{
+  font-family: "times new roman", sans-serif;
   width: 200px;
   height: 50px;
   border-radius: 20%;
