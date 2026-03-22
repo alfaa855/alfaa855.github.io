@@ -91,7 +91,7 @@ nav li {
 }
   
   .tanggal {
-    padding: 5px 30px:
+    padding: 5px 30px;
   }
   
   .pljrn {
@@ -122,8 +122,8 @@ nav li {
     padding: 10px 0;
   }
   
-  #navigasi:checked~.nav ul{
-    dislay: flex;
+  #navigasi:checked~nav ul{
+    display: flex;
   }
   
   .nav-button{
