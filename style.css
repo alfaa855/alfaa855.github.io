@@ -1,4 +1,5 @@
 
+
 body{
   font-family: "times new roman", sans-serif;
   background: #a138c7;
@@ -9,7 +10,7 @@ body{
 /*untuk table*/
 table {
   border-collapse: collapse;
-  border: 2px solid black
+  border: 2px solid black;
 }
 /*pengaturan tulisan hari di dalam table*/
 .hari{
@@ -27,7 +28,7 @@ table {
 }
 /*pengatur mapel pelajaran*/
 .mapel{
-  padding: 10px 5px;
+  padding: 0px 0px;
   line-height: 25px;
 }
 
@@ -40,7 +41,15 @@ table {
   text-align: center;
 }
 
-  
+#navigasi {
+  display:none;
+}
+
+.hamburger {
+  display: none;
+  font-size:30px;
+  cursor:pointer;
+}
 
 nav{
   display: flex;
@@ -65,7 +74,7 @@ nav li {
   border: none;
   color:white;
   text-decoration: none;
-  transition: all 0.5s cubic-bezier(0.5,1,1,3)
+  transition: all 0.5s cubic-bezier(0.5,1,1,0.5)
 }
 /*Untuk ngatur link kalau di tekan atau ada kursor*/
  .nav-button:hover {
@@ -82,7 +91,7 @@ nav li {
 }
   
   .tanggal {
-    padding: 5px 30px;
+    padding: 5px 30px:
   }
   
   .pljrn {
@@ -98,21 +107,26 @@ nav li {
     line-height: 20px;
   }
   
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-    padding: 10px 0px;
+  
+  .hamburger {
+    display: block;
+    padding: 10px;
   }
   
-  nav li { 
-    margin: 0px 5px;
+  .nav ul{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 10px 0;
   }
   
-  .nav-button {
+  #navigasi:checked~.nav ul{
+    dislay: flex;
+  }
+  
+  .nav-button{
+    padding: 8px 20px;
     font-size: 14px;
   }
-}
-
-
