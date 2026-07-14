@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+
     // untuk search engine di website nya 
 const searchInput = document.getElementById('searchInput');
 const products = document.querySelectorAll('.product');
@@ -72,5 +72,5 @@ products.forEach(function(product){
 
     //plus button//
 
-});//DOM content//
+
 
