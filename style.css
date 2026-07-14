@@ -1,0 +1,184 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    max-width: 100%;
+    color: black;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.main{
+     font-family: "times new roman", sans-serif;
+     width: 100%;
+     min-height: 100vh;
+     background-color: white;
+     
+     
+}
+
+.header{
+    background-color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+}
+.header-title{
+    color: black;
+}
+hr{
+    width: 100%;
+    margin:0px;
+}
+/*search */
+.search{
+    padding: 5px 0;
+    top: 38px;
+    border: 1px solid black;
+    position:-webkit-sticky;
+    position:sticky;
+    background-color: white;
+}
+#searchInput{
+    width: 100%;
+    height: 20px;
+    background-color: white;
+    border: none;
+}
+
+#searchInput, .productDetail input{
+    color: black;
+    background-color: white;
+    /*stop*/
+}
+/*product*/
+.products{
+    display:block;
+
+}
+.product{
+    border: 1px solid black;
+    margin-top: 1px;
+}
+.productname{
+    color:black;
+}
+
+/*product detail box dan detailing*/
+.productDetail{
+    display: none;
+    flex-direction: column ;
+    max-width: 100vh;
+    max-height: 50%;
+    width: 35%;
+    overflow-y: auto;
+    top: 25%;
+    left: 35%;
+    gap: 5px;
+    background-color:white;
+    z-index: 99;
+    position: fixed;
+}
+/*save and cancel button*/
+.save-and-cancel{
+    display: none;
+    z-index:99;
+    position: fixed;
+    gap:1px;
+    max-width: 100vw;
+    max-height:50vh;
+    width:35%;
+    top:75%;
+    left: 35%;
+    background-color: white;
+}
+.save-and-cancel button{
+    flex:1;
+}
+
+.cancel{
+    border:none;
+    padding: 5px 0px;
+}
+.save{
+    border: none;
+    padding: 5px 0px;
+}
+.cancel:hover{
+    background-color: blue;
+}
+.save:hover{
+    background-color: rgb(7, 158, 7);
+}
+/*sampai sini*/
+
+/*masing masing input box*/
+
+
+#PD-name-label{
+    position: sticky;
+    background-color: white;
+    top:0px;
+}
+
+#PD-product-name{
+    position: sticky;
+    top:18px;
+}
+.PD-ProductRead{
+    border: none;
+    padding: 8px 0;
+}
+.PD-ProductOrder{
+    border: none;
+    height: 20px;
+    padding: 16px 0;
+}
+.PD-SupplierRead{
+    border:none;
+    height: 20px;
+    padding: 16px 0;
+}
+/*PD-overlay*/
+.PD-overlay{
+    display: none;
+    position: fixed;
+    z-index:98;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+.plus-btn{
+    display:flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font: 40px sans-serif;
+    width: 55px;
+    height: 55px;
+    bottom: 3%;
+    left: 93%;
+    background-color: grey;
+    border-radius:50%;
+
+}
+
+@media (max-width:480px){
+.main{
+    width:100%
+}
+hr{
+    width:100% 
+}
+.search{
+    padding:5px;
+}
+}
