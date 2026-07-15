@@ -82,6 +82,7 @@ hr{
     z-index: 99;
     position: fixed;
 }
+
 /*save and cancel button*/
 .save-and-cancel{
     display: none;
@@ -152,9 +153,28 @@ hr{
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.5);
-
+}
+/*anti copy/select*/
+label{
+    user-select: none;
+    pointer-events: none;
+}
+input{
+    user-select: none;
+}
+.main{
+    user-select: none;
+    
+}
+.header{
+    user-select: none;
+    pointer-events: none;
+}
+.plus-btn{
+    user-select: none;
 }
 
+/*tombol tambahkan produk*/
 .plus-btn{
     display:flex;
     position: fixed;
