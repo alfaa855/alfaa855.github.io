@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+
     // untuk search engine di website nya 
 const searchInput = document.getElementById('searchInput');
 const products = document.querySelectorAll('.product');
@@ -109,5 +109,4 @@ inputButton.onclick = () =>{
     };
 //sampai sini//
 
-});//DOM content//
 
