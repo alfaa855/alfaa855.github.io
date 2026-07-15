@@ -1,4 +1,4 @@
-
+document.addEventListener('DOMContentLoaded', function () {
     // untuk search engine di website nya 
 const searchInput = document.getElementById('searchInput');
 const products = document.querySelectorAll('.product');
@@ -35,12 +35,27 @@ arrayProduct.forEach(function(item){
     productContainer.appendChild(item)
 });
 
+//untuk kunci lable supaya hanya bisa  di baca aja//
+    const readInput = document.querySelectorAll('.PD-ProductRead') 
+    const readSupplier= document.querySelectorAll('.PD-SupplierRead')
+
+    readInput.forEach(function(read) {
+         read.readOnly= true;
+    });
+    readSupplier.forEach(function(supplier){
+        supplier.readOnly = true;
+    });
+
+    //plus button//
+
 //product detail//
 const productDetail = document.querySelector(".productDetail");
 const saveandcancel = document.querySelector('.save-and-cancel');
 const overlay = document.querySelector('.PD-overlay');
 const body = document.querySelector('body')
 const cancel = document.querySelector('.cancel');
+const allInput= document.querySelectorAll('input');
+
 
 products.forEach(function(product){
     product.addEventListener("click", function(){
@@ -49,28 +64,50 @@ products.forEach(function(product){
             overlay.style.display = "block"
             body.style.overflow= "hidden"
         });
+         readInput.forEach(function(read) {
+         read.readOnly= true;
+         });
+         readSupplier.forEach(function(supplier){
+         supplier.readOnly = true;
+    });
     });
     cancel.addEventListener("click", function(){
         productDetail.style.display= "none";
         saveandcancel.style.display="none";
         overlay.style.display= "none";
         body.style.overflow = "auto";
-        
-    });
-    //sampai sini//
-
-    //untuk kunci lable supaya hanya bisa  di baca aja//
-    const readInput = document.querySelectorAll('.PD-ProductRead') 
-    const readSupplier= document.querySelectorAll('.PD-SupplierRead')
-
-    readInput.forEach(function(input) {
-         input.readOnly= true;
+        readInput.forEach(function(read){
+        read.readOnly = true;
     });
     readSupplier.forEach(function(supplier){
         supplier.readOnly = true;
     });
+        allInput.forEach(function(clear){
+        clear.value = "";
+        })
+    });
+    //sampai sini//
 
-    //plus button//
+    //Input button//
+const inputButton = document.querySelector('.plus-btn')
+   
+inputButton.onclick = () =>{
+    productDetail.style.display = "flex";
+    overlay.style.display = "block";
+    saveandcancel.style.display = "flex";
+    body.style.overflow = "hidden";
 
+    readInput.forEach(function(read){
+        read.readOnly = false;
+    });
+    readSupplier.forEach(function(supplier){
+        supplier.readOnly = false;
+    });
+    allInput.forEach(function(clear){
+        clear.value = "";
+    });
+    };
+//sampai sini//
 
+});//DOM content//
 
