@@ -265,12 +265,15 @@ hr{
 .search{
     padding:5px;
 }
-.productDetail{
-max-width: 100vh;
-max-height: 50%;
-width: 50%;
-top: 25%;
-left: 25%;
-gap: 5px;
+.productDetail, .save-and-cancel, .productInput{
+    max-width: 100vh;
+    max-height: 50%;
+    width: 80%;
+    top: 25%;
+    left: 10%;
+    gap: 5px;
+}
+.save-and-cancel{
+    top: 75%;
 }
 }
