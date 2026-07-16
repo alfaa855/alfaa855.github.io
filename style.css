@@ -83,42 +83,7 @@ hr{
     position: fixed;
 }
 
-/*save and cancel button*/
-.save-and-cancel{
-    display: none;
-    z-index:99;
-    position: fixed;
-    gap:1px;
-    max-width: 100vw;
-    max-height:50vh;
-    width:35%;
-    top:75%;
-    left: 35%;
-    background-color: white;
-}
-.save-and-cancel button{
-    flex:1;
-}
-
-.cancel{
-    border:none;
-    padding: 5px 0px;
-}
-.save{
-    border: none;
-    padding: 5px 0px;
-}
-.cancel:hover{
-    background-color: blue;
-}
-.save:hover{
-    background-color: rgb(7, 158, 7);
-}
-/*sampai sini*/
-
 /*masing masing input box*/
-
-
 #PD-name-label{
     position: sticky;
     background-color: white;
@@ -154,6 +119,98 @@ hr{
     height: 100vh;
     background-color: rgba(0,0,0,0.5);
 }
+/*sampai sini*/
+
+/*product input box*/
+.productInput{
+    display: none;
+    flex-direction: column ;
+    max-width: 100vh;
+    max-height: 50%;
+    width: 35%;
+    overflow-y: auto;
+    top: 25%;
+    left: 35%;
+    gap: 5px;
+    background-color:white;
+    z-index: 99;
+    position: fixed;
+}
+/*sampai sini*/
+/*masing masing input box*/
+#PI-name-label{
+    position: sticky;
+    background-color: white;
+    top:0px;
+}
+
+#PI-product-name{
+    position: sticky;
+    top:18px;
+}
+.PI-ProductRead{
+    border: none;
+    padding: 8px 0;
+}
+.PI-ProductOrder{
+    border: none;
+    height: 20px;
+    padding: 16px 0;
+}
+.PI-SupplierRead{
+    border:none;
+    height: 20px;
+    padding: 16px 0;
+}
+/*PD-overlay*/
+.PI-overlay{
+    display: none;
+    position: fixed;
+    z-index:98;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+}
+/*sampai sini*/
+/*save and cancel button*/
+.save-and-cancel{
+    display: none;
+    z-index:99;
+    position: fixed;
+    gap:1px;
+    max-width: 100vw;
+    max-height:50vh;
+    width:35%;
+    top:75%;
+    left: 35%;
+    background-color: white;
+}
+.save-and-cancel button{
+    flex:1;
+}
+
+.cancel{
+    border:none;
+    padding: 5px 0px;
+    user-select: none;
+}
+.save{
+    border: none;
+    padding: 5px 0px;
+    user-select: none;
+}
+.cancel:hover{
+    background-color: blue;
+}
+.save:hover{
+    background-color: rgb(7, 158, 7);
+}
+
+/*sampai sini*/
+
+
 /*anti copy/select*/
 label{
     user-select: none;
@@ -174,6 +231,13 @@ input{
     user-select: none;
 }
 
+/*order input in plus btn*/
+.PD-ProductOrder{
+    visibility: visible;
+}
+.PD-product-label{
+    visibility: visible;
+}
 /*tombol tambahkan produk*/
 .plus-btn{
     display:flex;
