@@ -55,7 +55,8 @@ const overlay = document.querySelector('.PD-overlay');
 const body = document.querySelector('body')
 const cancel = document.querySelector('.cancel');
 const allInput= document.querySelectorAll('input');
-
+const inputButton = document.querySelector('.plus-btn');
+const inputBox = document.querySelector('.productInput');
 
 products.forEach(function(product){
     product.addEventListener("click", function(){
@@ -63,16 +64,19 @@ products.forEach(function(product){
             saveandcancel.style.display ="flex"
             overlay.style.display = "block"
             body.style.overflow= "hidden"
-        });
          readInput.forEach(function(read) {
          read.readOnly= true;
          });
          readSupplier.forEach(function(supplier){
          supplier.readOnly = true;
+         });
     });
     });
+    //sampai sini//
+    //cancel button//
     cancel.addEventListener("click", function(){
         productDetail.style.display= "none";
+        inputBox.style.display = "none";
         saveandcancel.style.display="none";
         overlay.style.display= "none";
         body.style.overflow = "auto";
@@ -86,17 +90,14 @@ products.forEach(function(product){
         clear.value = "";
         })
     });
-    //sampai sini//
+    //sampai sini //
 
     //Input button//
-const inputButton = document.querySelector('.plus-btn')
-   
 inputButton.onclick = () =>{
-    productDetail.style.display = "flex";
+    inputBox.style.display = "flex";
     overlay.style.display = "block";
     saveandcancel.style.display = "flex";
     body.style.overflow = "hidden";
-
     readInput.forEach(function(read){
         read.readOnly = false;
     });
