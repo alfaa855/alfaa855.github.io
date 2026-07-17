@@ -7,7 +7,8 @@
     
 }
 
-html {
+html, body{
+    touch-action: manipulation;
     scroll-behavior: smooth;
 }
 .main{
@@ -148,7 +149,7 @@ hr{
     position: sticky;
     top:18px;
 }
-.PI-ProductRead{
+.PI-ProductInput{
     border: none;
     padding: 8px 0;
 }
@@ -157,7 +158,7 @@ hr{
     height: 20px;
     padding: 16px 0;
 }
-.PI-SupplierRead{
+.PI-SupplierInput{
     border:none;
     height: 20px;
     padding: 16px 0;
