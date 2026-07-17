@@ -1,4 +1,4 @@
-
+document.addEventListener('DOMContentLoaded', function () {
     // untuk search engine di website nya 
 const searchInput = document.getElementById('searchInput');
 const products = document.querySelectorAll('.product');
@@ -35,18 +35,6 @@ arrayProduct.forEach(function(item){
     productContainer.appendChild(item)
 });
 
-//untuk kunci lable supaya hanya bisa  di baca aja//
-    const readInput = document.querySelectorAll('.PD-ProductRead') 
-    const readSupplier= document.querySelectorAll('.PD-SupplierRead')
-
-    readInput.forEach(function(read) {
-         read.readOnly= true;
-    });
-    readSupplier.forEach(function(supplier){
-        supplier.readOnly = true;
-    });
-
-    //plus button//
 
 //product detail//
 const productDetail = document.querySelector(".productDetail");
@@ -54,7 +42,11 @@ const saveandcancel = document.querySelector('.save-and-cancel');
 const overlay = document.querySelector('.PD-overlay');
 const body = document.querySelector('body')
 const cancel = document.querySelector('.cancel');
-const allInput= document.querySelectorAll('input');
+const allPDRead = document.querySelectorAll('.PD-ProductRead');
+const PDsupplierRead = document.querySelectorAll('.PD-SupplierRead');
+const PDorderInput = document.querySelectorAll('.PD-ProductOrder');
+const allPIInput = document.querySelectorAll('.PI-ProductInput');
+const PIsupplierInput = document.querySelectorAll('.PI-SupplierInput');
 const inputButton = document.querySelector('.plus-btn');
 const inputBox = document.querySelector('.productInput');
 
@@ -64,10 +56,10 @@ products.forEach(function(product){
             saveandcancel.style.display ="flex"
             overlay.style.display = "block"
             body.style.overflow= "hidden"
-         readInput.forEach(function(read) {
+         allPDRead.forEach(function(read) {
          read.readOnly= true;
          });
-         readSupplier.forEach(function(supplier){
+         PDsupplierRead.forEach(function(supplier){
          supplier.readOnly = true;
          });
     });
@@ -80,16 +72,29 @@ products.forEach(function(product){
         saveandcancel.style.display="none";
         overlay.style.display= "none";
         body.style.overflow = "auto";
-        readInput.forEach(function(read){
+        allPDRead.forEach(function(read){
         read.readOnly = true;
     });
-    readSupplier.forEach(function(supplier){
+    PDsupplierRead.forEach(function(supplier){
         supplier.readOnly = true;
     });
-        allInput.forEach(function(clear){
+        allPDRead.forEach(function(clear){
         clear.value = "";
-        })
-    });
+        });
+        PDsupplierRead.forEach(function(clear){
+        clear.value = "";    
+        });
+        PDorderInput.forEach(function(clear){
+        clear.value = "";
+        });
+        allPIInput.forEach(function(clear){
+        clear.value = "";
+        });
+        PIsupplierInput.forEach(function(clear){
+        clear.value ="";
+        });
+        });
+
     //sampai sini //
 
     //Input button//
@@ -98,18 +103,9 @@ inputButton.onclick = () =>{
     overlay.style.display = "block";
     saveandcancel.style.display = "flex";
     body.style.overflow = "hidden";
-    readInput.forEach(function(read){
-        read.readOnly = false;
-    });
-    readSupplier.forEach(function(supplier){
-        supplier.readOnly = false;
-    });
-    allInput.forEach(function(clear){
-       clear.value = "";
-    });
-    };
+};
 //sampai sini//
-//antizoom hp//
+//anti zoom di hp//
 document.addEventListener('touchmove',function (event) {
     if (event.touches.length > 1 ){
         event.preventDefault()
@@ -124,5 +120,12 @@ document.addEventListener('touchend', function(zoom){
     };
      doubleTap = now
     }, false);
-//sampai sini//
+    //sampe sini//
+    document.addEventListener('wheel', function(wheelEvent){
+        if (wheelEvent.ctrlKey){
+            wheelEvent.preventDefault();
+        };
+    }, {passive: false});
+
+});//DOM content//
 
