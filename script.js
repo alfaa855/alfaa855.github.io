@@ -105,9 +105,24 @@ inputButton.onclick = () =>{
         supplier.readOnly = false;
     });
     allInput.forEach(function(clear){
-        clear.value = "";
+       clear.value = "";
     });
     };
 //sampai sini//
+//antizoom hp//
+document.addEventListener('touchmove',function (event) {
+    if (event.touches.length > 1 ){
+        event.preventDefault()
+    }
+}, { passive:false});
 
+let doubleTap = 0 ;
+document.addEventListener('touchend', function(zoom){
+    const now = (new Date()).getTime();
+    if(now - doubleTap <= 300){
+        zoom.preventDefault();
+    };
+     doubleTap = now
+    }, false);
+//sampai sini//
 
