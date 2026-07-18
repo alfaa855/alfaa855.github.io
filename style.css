@@ -187,20 +187,6 @@ hr{
     z-index: 99;
     gap:5px;
 }
-/*save Input Btn*/
-.checkBtn{
-    display:flex;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font: 10px sans-serif;
-    width: 38px;
-    height: 38px;
-    top: 0%;
-    left: 97%;
-    background-color: grey;
-}
 
 /*save and cancel button*/
 .save-and-cancel{
@@ -271,6 +257,35 @@ input{
 }
 /*tombol tambahkan produk*/
 .plus-btn{
+    display:none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font: 15px sans-serif;
+    width: 100px;
+    height: 35px;
+    bottom: 12%;
+    left: 91%;
+    background-color: grey;
+    z-index: 99;
+}
+/*save Input Btn*/
+.checkBtn{
+    display:none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font: 15px sans-serif;
+    width: 100px;
+    height: 35px;
+    bottom: 21%;
+    left: 91%;
+    background-color: grey;
+    z-index: 99;
+}
+.btnGroup{
     display:flex;
     position: fixed;
     justify-content: center;
@@ -283,7 +298,18 @@ input{
     left: 95%;
     background-color: grey;
     border-radius:50%;
+}
 
+.btnGroupDisplay {
+    display: none;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    background-color: #ffffff2c;
+    backdrop-filter: (8px);
+    z-index: 98;
+    left: 91%;
+    bottom: 12%;
 }
 
 @media (max-width:480px){
