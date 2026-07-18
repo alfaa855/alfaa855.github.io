@@ -374,7 +374,7 @@ hr{
     width:100% 
 }
 
-.productDetail, .save-and-cancel, .productInput{
+.productDetail, .PD-product-read-btn, .PI-product-input-btn, .productInput{
     max-width: 100vh;
     max-height: 50%;
     width: 80%;
@@ -382,7 +382,10 @@ hr{
     left: 10%;
     gap: 5px;
 }
-.save-and-cancel{
+.PI-product-input-btn{
+    top: 75%;
+}
+.PD-product-read-btn{
     top: 75%;
 }
 .plus-btn {
