@@ -15,13 +15,13 @@ html, body{
      font-family: "times new roman", sans-serif;
      width: 100%;
      min-height: 100vh;
-     background-color: white;
+     background-color: rgb(224, 224, 224);
      
      
 }
 
 .header{
-    background-color: white;
+    background-color: #d7d7d7;
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
@@ -36,23 +36,25 @@ hr{
 }
 /*search */
 .search{
-    padding: 5px 0;
+    display: flex;
     top: 38px;
     border: 1px solid black;
     position:-webkit-sticky;
     position:sticky;
-    background-color: white;
+    background-color: #d7d7d7;
 }
 #searchInput{
+    display: flex;
     width: 100%;
     height: 20px;
-    background-color: white;
+    padding: 20px 0;
+    background-color: #d7d7d7;
     border: none;
 }
 
 #searchInput, .productDetail input{
     color: black;
-    background-color: white;
+    background-color: #d7d7d7;
     /*stop*/
 }
 /*product*/
@@ -175,6 +177,32 @@ hr{
     background-color: rgba(0,0,0,0.5);
 }
 /*sampai sini*/
+/*copy box style*/
+.copyBox{
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #d7d7d7;
+    position: fixed;
+    z-index: 99;
+    gap:5px;
+}
+/*save Input Btn*/
+.checkBtn{
+    display:flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font: 10px sans-serif;
+    width: 38px;
+    height: 38px;
+    top: 0%;
+    left: 97%;
+    background-color: grey;
+}
+
 /*save and cancel button*/
 .save-and-cancel{
     display: none;
@@ -231,6 +259,9 @@ input{
 .plus-btn{
     user-select: none;
 }
+.checkBtn{
+    user-select: none;
+}
 
 /*order input in plus btn*/
 .PD-ProductOrder{
@@ -263,9 +294,7 @@ input{
 hr{
     width:100% 
 }
-.search{
-    padding:5px;
-}
+
 .productDetail, .save-and-cancel, .productInput{
     max-width: 100vh;
     max-height: 50%;
@@ -281,5 +310,9 @@ hr{
     left: 80%;
     width: 50px;
     height: 50px;
+    bottom: 3px;
+}
+.checkBtn{
+    left: 86%;
 }
 }
