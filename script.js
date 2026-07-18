@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // untuk search engine di website nya 
+  // untuk search engine di website nya 
 const searchInput = document.getElementById('searchInput');
 const products = document.querySelectorAll('.product');
 
@@ -127,5 +126,4 @@ document.addEventListener('touchend', function(zoom){
         };
     }, {passive: false});
 
-});//DOM content//
 
