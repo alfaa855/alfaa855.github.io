@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function () {
     // untuk search engine di website nya 
 const searchInput = document.getElementById('searchInput');
 const products = document.querySelectorAll('.product');
@@ -36,23 +37,32 @@ arrayProduct.forEach(function(item){
 
 
 //product detail//
-const productDetail = document.querySelector(".productDetail");
-const saveandcancel = document.querySelector('.save-and-cancel');
-const overlay = document.querySelector('.PD-overlay');
+const readBox = document.querySelector(".productDetail");
+const PDsaveandcancel = document.querySelector('.PD-product-read-btn');
+const PIsaveandcancel = document.querySelector('.PI-product-input-btn');
+const overlay = document.querySelector('.PDPI-overlay');
 const body = document.querySelector('body')
-const cancel = document.querySelector('.cancel');
+const PIcancel = document.querySelector('.PIcancel');
+const PDcancel = document.querySelector('.PDcancel');
 const allPDRead = document.querySelectorAll('.PD-ProductRead');
 const PDsupplierRead = document.querySelectorAll('.PD-SupplierRead');
 const PDorderInput = document.querySelectorAll('.PD-ProductOrder');
+//Product Input//
+
+const inputBox = document.querySelector('.productInput');
 const allPIInput = document.querySelectorAll('.PI-ProductInput');
 const PIsupplierInput = document.querySelectorAll('.PI-SupplierInput');
-const inputButton = document.querySelector('.plus-btn');
-const inputBox = document.querySelector('.productInput');
+//btn group//
+const GrupBtn = document.querySelector('.btnGroup');
+const GroupBTND = document.querySelector('.btnGroupDisplay');
+const inputbtn = document.querySelector('.plus-btn');
+const checkbtn  = document.querySelector('.checkBtn');
+const Xbtn = document.querySelector('.in-cancelHam');
 
 products.forEach(function(product){
     product.addEventListener("click", function(){
-            productDetail.style.display = "flex"
-            saveandcancel.style.display ="flex"
+            readBox.style.display = "flex"
+            PDsaveandcancel.style.display ="flex"
             overlay.style.display = "block"
             body.style.overflow= "hidden"
          allPDRead.forEach(function(read) {
@@ -64,11 +74,10 @@ products.forEach(function(product){
     });
     });
     //sampai sini//
-    //cancel button//
-    cancel.addEventListener("click", function(){
-        productDetail.style.display= "none";
-        inputBox.style.display = "none";
-        saveandcancel.style.display="none";
+    //PD cancel button//
+    PDcancel.addEventListener("click", function(){
+        readBox.style.display= "none";
+        PDsaveandcancel.style.display="none";
         overlay.style.display= "none";
         body.style.overflow = "auto";
         allPDRead.forEach(function(read){
@@ -86,33 +95,65 @@ products.forEach(function(product){
         PDorderInput.forEach(function(clear){
         clear.value = "";
         });
+        });
+    //sampai sini //
+ //PI cancel button//
+    PIcancel.addEventListener("click", function(){
+        inputBox.style.display= "none";
+        PIsaveandcancel.style.display="none";
+        overlay.style.display= "none";
+        body.style.overflow = "auto";
+        allPIInput.forEach(function(read){
+        read.readOnly = false;
+    });
+    PIsupplierInput.forEach(function(supplier){
+        supplier.readOnly = false;
+    });
         allPIInput.forEach(function(clear){
         clear.value = "";
         });
         PIsupplierInput.forEach(function(clear){
-        clear.value ="";
+        clear.value = "";    
         });
-        });
-    //sampai sini //
+    });
     //save btn//
     //sampai sini//
-    //btn group//
-    const GrupBtn = document.querySelector('.btnGroup')
-    const GroupBTND = document.querySelector('.btnGroupDisplay')
-    const inputbtn = document.querySelector('.plus-btn')
-    const checkbtn  = document.querySelector('.checkBtn')
+    //overlay click//
+    overlay.addEventListener("click", function(){
+        inputBox.style.display ="none"
+        readBox.style.display ="none"
+        PDsaveandcancel.style.display ="none"
+        PIsaveandcancel.style.display ="none"
+        overlay.style.display ="none"
+        GrupBtn.style.display ="flex"
+        GroupBTND.style.display ="none"
+        Xbtn.style.display ="none"
+        inputbtn.style.display ="none"
+        checkbtn.style.display ="none"
+        body.style.overflow ="auto"
 
-    GrupBtn.onclick =() =>{
+    });
+    //grup btn//
+    GrupBtn.addEventListener("click", function(){
         GroupBTND.style.display = "flex"
         inputbtn.style.display = "flex"
         checkbtn.style.display ="flex"
-    }
-
+        GrupBtn.style.display ="none"
+        Xbtn.style.display = "flex"
+    });
+    //cancel btn grup//
+    Xbtn.addEventListener("click", function(){
+        GroupBTND.style.display = "none"
+        inputbtn.style.display ="none"
+        checkbtn.style.display ="none"
+        GrupBtn.style.display = "flex"
+        Xbtn.style.display ="none"
+    });
     //Input button//
-inputButton.onclick = () =>{
+inputbtn.onclick = () =>{
     inputBox.style.display = "flex";
     overlay.style.display = "block";
-    saveandcancel.style.display = "flex";
+    PIsaveandcancel.style.display = "flex";
     body.style.overflow = "hidden";
 };
 //sampai sini//
@@ -139,4 +180,5 @@ document.addEventListener('touchend', function(zoom){
         };
     }, {passive: false});
 
+});//DOM content//
 
