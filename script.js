@@ -121,7 +121,6 @@ products.forEach(function(product){
     //overlay click//
     overlay.addEventListener("click", function(){
         inputBox.style.display ="none"
-        readBox.style.display ="none"
         PDsaveandcancel.style.display ="none"
         PIsaveandcancel.style.display ="none"
         overlay.style.display ="none"
