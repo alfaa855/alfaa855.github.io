@@ -15,13 +15,13 @@ html, body{
      font-family: "times new roman", sans-serif;
      width: 100%;
      min-height: 100vh;
-     background-color: rgb(224, 224, 224);
+     background-color: rgb(254, 252, 252);
      
      
 }
 
 .header{
-    background-color: #d7d7d7;
+    background-color: rgb(254, 252, 252);
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
@@ -41,14 +41,14 @@ hr{
     border: 1px solid black;
     position:-webkit-sticky;
     position:sticky;
-    background-color: #d7d7d7;
+    background-color: rgb(254, 252, 252);
 }
 #searchInput{
     display: flex;
     width: 100%;
     height: 20px;
     padding: 20px 0;
-    background-color: #d7d7d7;
+    background-color: rgb(254, 252, 252);
     border: none;
 }
 
@@ -88,7 +88,7 @@ hr{
 /*masing masing input box*/
 #PD-name-label{
     position: sticky;
-    background-color: white;
+    background-color: white ;
     top:0px;
 }
 
@@ -111,7 +111,7 @@ hr{
     padding: 16px 0;
 }
 /*PD-overlay*/
-.PD-overlay{
+.PDPI-overlay{
     display: none;
     position: fixed;
     z-index:98;
@@ -188,8 +188,8 @@ hr{
     gap:5px;
 }
 
-/*save and cancel button*/
-.save-and-cancel{
+/*PD save and cancel button*/
+.PD-product-read-btn{
     display: none;
     z-index:99;
     position: fixed;
@@ -201,24 +201,55 @@ hr{
     left: 35%;
     background-color: white;
 }
-.save-and-cancel button{
-    flex:1;
+.PD-product-read-btn button{
+    flex: 1;
 }
-
-.cancel{
-    border:none;
-    padding: 5px 0px;
-    user-select: none;
-}
-.save{
+.PDcancel{
     border: none;
     padding: 5px 0px;
     user-select: none;
 }
-.cancel:hover{
+.PDsave{
+    border: none;
+    padding: 5px 0px;
+    user-select: none;
+}
+.PDcancel:hover{
     background-color: blue;
 }
-.save:hover{
+.PDsave:hover{
+    background-color: rgba(7, 158, 7);;
+}
+/*PI saveandcancel button*/
+.PI-product-input-btn{
+    display: none;
+    z-index:99;
+    position: fixed;
+    gap:1px;
+    max-width: 100vw;
+    max-height:50vh;
+    width:35%;
+    top:75%;
+    left: 35%;
+    background-color: white;
+}
+.PI-product-input-btn button{
+    flex: 1;
+}
+.PIcancel{
+    border:none;
+    padding: 5px 0px;
+    user-select: none;
+}
+.PIsave{
+    border: none;
+    padding: 5px 0px;
+    user-select: none;
+}
+.PIcancel:hover{
+    background-color: blue;
+}
+.PIsave:hover{
     background-color: rgb(7, 158, 7);
 }
 
@@ -247,7 +278,12 @@ input{
 .checkBtn{
     user-select: none;
 }
-
+.btnGroup{
+    user-select: none;
+}
+.btnGroupDisplay{
+    user-select: none;
+}
 /*order input in plus btn*/
 .PD-ProductOrder{
     visibility: visible;
@@ -270,7 +306,7 @@ input{
     background-color: grey;
     z-index: 99;
 }
-/*save Input Btn*/
+/*see Input Btn*/
 .checkBtn{
     display:none;
     position: fixed;
@@ -285,6 +321,7 @@ input{
     background-color: grey;
     z-index: 99;
 }
+/*hamburger icon*/
 .btnGroup{
     display:flex;
     position: fixed;
@@ -299,7 +336,24 @@ input{
     background-color: grey;
     border-radius:50%;
 }
+/*if  hamburger icon hide*/
+.in-cancelHam{
+    display:none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font: 40px sans-serif;
+    width: 55px;
+    height: 55px;
+    bottom: 2%;
+    left: 95%;
+    background-color: grey;
+    border-radius:50%;
+    border: none;
+}
 
+/*display jika hamburger ditekan*/
 .btnGroupDisplay {
     display: none;
     width: 100px;
@@ -333,11 +387,17 @@ hr{
 }
 .plus-btn {
     left: 85%;
-    width: 50px;
-    height: 50px;
-    bottom: 3px;
+   
+
 }
 .checkBtn{
-    left: 91%;
+    left: 79%;
 }
+.btnGroup{
+    left: 87%
+}
+.in-cancelHam{
+    left: 87%;
+}
+
 }
