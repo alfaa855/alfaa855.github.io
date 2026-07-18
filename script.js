@@ -1,4 +1,4 @@
-  // untuk search engine di website nya 
+// untuk search engine di website nya //
 const searchInput = document.getElementById('searchInput');
 const products = document.querySelectorAll('.product');
 
@@ -93,8 +93,20 @@ products.forEach(function(product){
         clear.value ="";
         });
         });
-
     //sampai sini //
+    //save btn//
+    //sampai sini//
+    //btn group//
+    const GrupBtn = document.querySelector('.btnGroup')
+    const GroupBTND = document.querySelector('.btnGroupDisplay')
+    const inputbtn = document.querySelector('.plus-btn')
+    const checkbtn  = document.querySelector('.checkBtn')
+
+    GrupBtn.onclick =() =>{
+        GroupBTND.style.display = "flex"
+        inputbtn.style.display = "flex"
+        checkbtn.style.display ="flex"
+    }
 
     //Input button//
 inputButton.onclick = () =>{
@@ -120,6 +132,7 @@ document.addEventListener('touchend', function(zoom){
      doubleTap = now
     }, false);
     //sampe sini//
+    //anti zoom di PC//
     document.addEventListener('wheel', function(wheelEvent){
         if (wheelEvent.ctrlKey){
             wheelEvent.preventDefault();
