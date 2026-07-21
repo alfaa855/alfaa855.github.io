@@ -41,8 +41,8 @@ arrayProduct.forEach(function(item){
 const readBox = document.querySelector(".productDetail");
 const PDoverlay = document.querySelector('.PD-overlay');
 const allPDRead = document.querySelectorAll('.PD-ProductRead');
-const PDsupplierRead = document.querySelector('.PD-SupplierRead');
-const PDorderInput = document.querySelector('.PD-ProductOrder');
+const PDsupplierRead = document.querySelectorAll('.PD-SupplierRead');
+const PDorderInput = document.querySelectorAll('.PD-ProductOrder');
 //body element//
 const body = document.querySelector('body');
 //save and cancel button//
