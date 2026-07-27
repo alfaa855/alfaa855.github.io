@@ -54,8 +54,8 @@ hr{
 
 #searchInput, .productDetail input{
     color: black;
-    /*stop*/
 }
+/*stop*/
 /*product*/
 .products{
     display:block;
@@ -382,7 +382,7 @@ hr{
     background-color: blue;
 }
 .PDsave:hover{
-    background-color: rgba(7, 158, 7);;
+    background-color: rgba(7, 158, 7);
 }
 /*PI saveandcancel button*/
 .PI-product-input-btn{
@@ -555,10 +555,12 @@ hr{
 }
 .plus-btn {
     left: 75%;
+    bottom: 16%;
 
 }
 .checkBtn{
     left: 75%;
+    bottom: 25%;
 
 }
 .btnGroup{
@@ -573,6 +575,8 @@ hr{
 }
 .CBmenuBox{
     gap: 2px;
+    width : 50%;
+    height : 15%;
 }
 .CBhistory{
     padding: 7% 0px;
