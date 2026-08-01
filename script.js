@@ -2,12 +2,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
    
     // untuk search exact di website nya //
-const searchInput = document.getElementById('searchInput');
-
 
 //urutkan nama//
 const productContainer = document.querySelector('.products')
+const listContainer = document.querySelector('.list_check')
+
+
 /*
+//untuk sort dari HTML tanpa local storage//
 const arrayProduct = Array.from(products)
 arrayProduct.sort(function(productA, productB) {
     const nama1 = productA.querySelector('.productname').textContent.toLowerCase();
@@ -49,7 +51,6 @@ const InputSupplier = document.getElementById('PI-product-supplier')
 const InputModal =document.getElementById('PI-product-modal')
 const InputGrosir = document.getElementById('PI-product-sell-level')
 const InputPrice = document.getElementById('PI-product-sell-price')
-
 //btn group//
 const GrupBtn = document.querySelector('.btnGroup');
 const GroupBTND = document.querySelector('.btnGroupDisplay');
@@ -65,6 +66,8 @@ const CBmenubox = document.querySelector('.CBmenuBox');
 const CBhistory = document.querySelector('.CBhistory');
 const CBsaveData = document.querySelector('.CBsaveData');
 const CBcancelData = document.querySelector('.CBcancelData');
+       
+ 
 
 
  //JSON mengambil data dari LS//
@@ -126,7 +129,7 @@ const CBcancelData = document.querySelector('.CBcancelData');
         renderFromLS();
     });
     //merender data dari Local Storage ke Tampilan website//
-    function renderFromLS(){   
+    function renderFromLS(){
         productContainer.innerHTML = '';
         //sort//
         listProduct.sort(function(a, b){
@@ -143,10 +146,52 @@ const CBcancelData = document.querySelector('.CBcancelData');
             <p class="productstock">${item.stok}</p>
             `
             productContainer.appendChild(listCards);
+            console.log('from ls active')
         });
         const products = document.querySelectorAll('.product')
-        searchInput.addEventListener('input',function(){
+products.forEach(function(product){
+    product.addEventListener("click", function(){
+        //ambiil id unik dari kartu//
+        const productId = Number(product.dataset.id);
+        const targetProduct= listProduct.find(item => item.id === productId);
+
+        if(targetProduct) {
+            readBox.dataset.activeId = targetProduct.id;
+            document.getElementById('PD-product-name').value = targetProduct.nama;
+            document.getElementById('PD-product-code').value = targetProduct.code;
+            document.getElementById('PD-product-stock').value = targetProduct.stok;
+            document.getElementById('PD-product-supplier').value = targetProduct.supplier;
+            document.getElementById('PD-product-modal').value = targetProduct.modal;
+            document.getElementById('PD-product-sell-level').value = targetProduct.hargaGrosir;
+            document.getElementById('PD-product-sell-price').value = targetProduct.hargaJual;
+        }
+        console.log('data berhasil di tampilkan')
+
+            readBox.style.display = "flex";
+            PDsaveandcancel.style.display ="flex";
+            PDoverlay.style.display = "block";
+            body.style.overflow= "hidden";
+            inputBox.style.display ="none";
+            resetHamBtn();
+         allPDRead.forEach(function(read) {
+         read.readOnly= true;
+         });
+         PDsupplierRead.forEach(function(supplier){
+         supplier.readOnly = true;
+         });
+         console.log('user click list');
+
+         });
+        });
+    };
+    //sampai sini//
+    renderFromLS();
+
+    //search//
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input',function(){
         const filterText = searchInput.value.toLowerCase().trim();
+        const products = document.querySelectorAll('.product')
         products.forEach(function(product){
         const productNameElement = product.querySelector('.productname');
         const productName = productNameElement.textContent.toLowerCase();
@@ -161,28 +206,10 @@ const CBcancelData = document.querySelector('.CBcancelData');
     });
 });
 // sampai sini//
-products.forEach(function(product){
-    product.addEventListener("click", function(){
-            readBox.style.display = "flex";
-            PDsaveandcancel.style.display ="flex";
-            PDoverlay.style.display = "block";
-            body.style.overflow= "hidden";
-            inputBox.style.display ="none";
-            resetHamBtn();
-         allPDRead.forEach(function(read) {
-         read.readOnly= true;
-         });
-         PDsupplierRead.forEach(function(supplier){
-         supplier.readOnly = true;
-         });
-    });
-    });
-    //sampai sini//
-        
-    };
 
-    renderFromLS();
-
+    
+// sampai sini//
+   
 function resetHamBtn(){
     GrupBtn.style.display ="flex";
     GroupBTND.style.display ="none";
