@@ -177,12 +177,26 @@ hr{
 }
 /*sampai sini*/
 /*copy box style*/
+.list_check{
+    display: flex;
+    width:100vw;
+    height: 80vh;
+    background-color: white;
+    position: fixed;
+    top: 13%;
+    overflow-y: auto;
+    flex-direction: column;
+}
+.check_product{
+    border: 1px black solid;
+}
+    
 .copyBox{
     display: none;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background-color: #d7d7d7;
+    background-color: #dbdada;
     position: fixed;
     z-index: 99;
     gap:5px;
