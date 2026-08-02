@@ -306,9 +306,6 @@ checkbtn.onclick =()=> {
     body.style.overflow="hidden";
     console.log('checkBTN active');
 }
-copyBox.forEach(function(read){
-    read.readOnly = true;
-})
 grupMenu.onclick = ()=>{
     OnCBmenuBox();
     grupMenu.style.display= "none";
