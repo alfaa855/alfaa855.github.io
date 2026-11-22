@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Hari Guru — Kenangan Kelas XI F</title>
+    <!-- Memuat Tailwind CSS untuk tata letak responsif dan estetika modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memuat Google Fonts (Playfair Display untuk judul elegan, Inter untuk teks bacaan yang bersih) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        cream: {
+                            50: '#FDFBF7',
+                            100: '#F7F2E8',
+                            200: '#EFE5D4',
+                        },
+                        terracotta: {
+                            500: '#C86D51',
+                            600: '#B05A3F',
+                            700: '#8F4630',
+                        },
+                        sage: {
+                            100: '#E5ECE6',
+                            600: '#58725D',
+                            800: '#374A3B',
+                        },
+                        espresso: {
+                            800: '#3D2E27',
+                            900: '#291E19',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Kustomisasi ringan untuk animasi halus dan scrollbar */
+        body {
+            background-color: #FDFBF7;
+            color: #291E19;
+        }
+        .fade-in {
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Animasi gelombang musik saat aktif */
+        .music-bar {
+            transition: height 0.2s ease;
+        }
+        .playing .bar-1 { animation: bounceBar 0.8s infinite ease-in-out; }
+        .playing .bar-2 { animation: bounceBar 0.6s infinite ease-in-out 0.2s; }
+        .playing .bar-3 { animation: bounceBar 0.9s infinite ease-in-out 0.4s; }
+        @keyframes bounceBar {
+            0%, 100% { height: 6px; }
+            50% { height: 16px; }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-terracotta-500 selection:text-white">
+
+    <!-- Navigasi Atas Sederhana -->
+    <header class="sticky top-0 z-40 bg-cream-50/90 backdrop-blur-md border-b border-cream-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-serif font-bold text-lg sm:text-xl text-espresso-900 flex items-center gap-2">
+                <span class="w-8 h-8 rounded-full bg-terracotta-500 text-white flex items-center justify-center text-sm font-sans">XI</span>
+                <span>Untuk Wali Kelas Kami</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-espresso-800">
+                <a href="#sambutan" class="hover:text-terracotta-600 transition">Surat Singkat</a>
+                <a href="#galeri" class="hover:text-terracotta-600 transition">Galeri Momen</a>
+                <a href="#ucapan" class="hover:text-terracotta-600 transition">Kata Mereka</a>
+            </nav>
+
+            <!-- Tombol Panduan Simpan Kenang-Kenangan -->
+            <button onclick="openSaveModal()" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-sage-800 hover:bg-sage-600 text-white text-xs sm:text-sm font-medium transition shadow-sm cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                <span>Simpan Offline</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- 1. BAGIAN HERO / PEMBUKA -->
+    <section class="relative overflow-hidden pt-12 pb-16 sm:pt-20 sm:pb-24 px-4 sm:px-6">
+        <!-- Dekorasi Latar Lembut -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-terracotta-500/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cream-200/80 text-terracotta-700 text-xs sm:text-sm font-semibold tracking-wide mb-6">
+                <span>25 November • Persembahan Spesial Kelas XI F</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-espresso-900 leading-tight mb-6">
+                Selamat Hari Guru, <br>
+                <span class="text-terracotta-600 italic">Bapak/Ibu [Nama Wali Kelas]</span>
+            </h1>
+
+            <p class="text-base sm:text-lg md:text-xl text-espresso-800/85 max-w-2xl mx-auto leading-relaxed mb-10">
+                "Terima kasih telah menjadi rumah kedua bagi kami di sekolah—membimbing dengan sabar, mendengarkan keluh kesah kami, dan tak pernah lelah percaya pada potensi setiap anak di kelas ini."
+            </p>
+
+            <!-- Foto Utama Wali Kelas Bersama Kelas -->
+            <div class="relative max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-cream-100 group">
+                <!-- Ganti 'src' di bawah ini dengan relative path foto utama kelasmu nanti, misal: assets/foto-utama.jpg -->
+                <img 
+                    id="hero-photo-img"
+                    src="https://placehold.co/1200x700/EFE5D4/3D2E27?text=Foto+Utama+Kelas+XI+F+%26+Wali+Kelas" 
+                    onerror="this.src='https://placehold.co/1200x700/EFE5D4/3D2E27?text=Foto+Kelas+Kita'"
+                    alt="Foto Kebersamaan Kelas XI F dan Wali Kelas" 
+                    class="w-full h-auto object-cover aspect-[16/10] group-hover:scale-[1.01] transition duration-500"
+                >
+                <div class="bg-white/95 backdrop-blur-sm px-5 py-3.5 text-left flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-t border-cream-200">
+                    <div>
+                        <p class="font-semibold text-sm text-espresso-900">Keluarga Besar Kelas XI F — Tahun Ajaran 2026/2027</p>
+                        <p class="text-xs text-espresso-800/70">Sebuah arsip kecil dari banyak cerita yang tak tergantikan.</p>
+                    </div>
+                    <a href="#ucapan" class="inline-flex items-center gap-1.5 text-xs font-semibold text-terracotta-600 hover:text-terracotta-700">
+                        <span>Baca Ucapan Kami</span>
+                        <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Surat Pembuka Singkat -->
+    <section id="sambutan" class="py-12 px-4 sm:px-6">
+        <div class="max-w-3xl mx-auto bg-cream-100/80 border border-cream-200 rounded-3xl p-6 sm:p-10 shadow-sm">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-espresso-900 mb-4">Sepucuk Kata dari Kami</h2>
+            <div class="space-y-4 text-sm sm:text-base text-espresso-800/90 leading-relaxed">
+                <p>
+                    Mungkin kami bukan kelas yang paling tenang, paling rapi, atau paling mudah diatur. Sering kali kami membuat Bapak/Ibu harus menarik napas lebih panjang menghadapi tingkah laku kami sehari-hari.
+                </p>
+                <p>
+                    Namun di balik semua riuh di ruang kelas, kami selalu merasakan ketulusan Bapak/Ibu dalam menjaga dan mengarahkan kami. Halaman sederhana ini kami buat agar setiap foto dan kalimat kecil dari kami bisa terus tersimpan—sebagai pengingat bahwa kami pernah tumbuh bersama di bawah bimbingan guru terbaik.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. GALERI FOTO KEBERSAMAAN -->
+    <section id="galeri" class="py-14 sm:py-20 px-4 sm:px-6 max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso-900 mb-3">Jejak Momen Kebersamaan</h2>
+            <p class="text-sm sm:text-base text-espresso-800/80">Klik pada foto untuk melihat tampilan penuh beserta cerita di balik momennya.</p>
+        </div>
+
+        <!-- Tombol Filter Kategori -->
+        <div id="gallery-filters" class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+            <button data-filter="semua" class="filter-btn active px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-terracotta-500 text-white shadow-sm transition cursor-pointer">
+                Semua Momen
+            </button>
+            <button data-filter="wali-kelas" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-cream-100 text-espresso-800 hover:bg-cream-200 transition cursor-pointer">
+                Bareng Wali Kelas
+            </button>
+            <button data-filter="kelas" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-cream-100 text-espresso-800 hover:bg-cream-200 transition cursor-pointer">
+                Momen Kelas
+            </button>
+            <button data-filter="lomba" class="filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-cream-100 text-espresso-800 hover:bg-cream-200 transition cursor-pointer">
+                Kegiatan & Lomba
+            </button>
+        </div>
+
+        <!-- Grid Galeri Foto (Diisi otomatis lewat JavaScript agar mudah dikelola) -->
+        <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Kartu foto akan dirender di sini -->
+        </div>
+    </section>
+
+    <!-- 3. KARTU PESAN & KESAN ANGGOTA KELAS -->
+    <section id="ucapan" class="py-14 sm:py-20 px-4 sm:px-6 bg-cream-100/60 border-t border-cream-200">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso-900 mb-3">Pesan & Kesan dari Kami</h2>
+                <p class="text-sm sm:text-base text-espresso-800/80">
+                    Setiap nama punya cerita dan doa tersendiri untuk Bapak/Ibu. Klik salah satu kartu untuk membaca pesan lengkapnya.
+                </p>
+            </div>
+
+            <!-- Kolom Pencarian Nama Siswa (Memudahkan wali kelas mencari nama murid tertentu) -->
+            <div class="max-w-md mx-auto mb-10">
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        id="search-student" 
+                        placeholder="Cari nama siswa..." 
+                        class="w-full pl-10 pr-4 py-3 rounded-2xl bg-white border border-cream-200 text-sm text-espresso-900 placeholder-espresso-800/50 focus:outline-none focus:ring-2 focus:ring-terracotta-500/40 focus:border-terracotta-500 shadow-sm"
+                    >
+                    <svg class="w-4 h-4 text-espresso-800/50 absolute left-3.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Grid Kartu Ucapan Siswa -->
+            <div id="messages-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Kartu ucapan akan dirender dari array JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Penutup -->
+    <footer class="py-10 px-4 text-center border-t border-cream-200 bg-cream-50">
+        <p class="font-serif text-lg font-semibold text-espresso-900 mb-1">Dibuat dengan penuh rasa hormat oleh Kelas XI F</p>
+        <p class="text-xs text-espresso-800/70">Selamat Hari Guru Nasional • Semoga Bapak/Ibu selalu sehat dan bahagia.</p>
+    </footer>
+
+    <!-- 4. TOMBOL PEMUTAR MUSIK INSTRUMENTAL LEMBUT (MELAYANG DI POJOK KANAN BAWAH) -->
+    <div class="fixed bottom-5 right-5 z-40">
+        <button 
+            id="music-toggle" 
+            onclick="toggleMusic()" 
+            aria-label="Putar atau Hentikan Musik Latar"
+            class="flex items-center gap-3 px-4 py-3 rounded-full bg-espresso-900 hover:bg-espresso-800 text-cream-50 shadow-lg transition transform hover:scale-105 cursor-pointer"
+        >
+            <!-- Ikon Gelombang Suara -->
+            <div id="music-bars" class="flex items-end gap-1 h-4">
+                <span class="music-bar bar-1 w-1 h-2 bg-terracotta-500 rounded-full"></span>
+                <span class="music-bar bar-2 w-1 h-3 bg-terracotta-500 rounded-full"></span>
+                <span class="music-bar bar-3 w-1 h-2 bg-terracotta-500 rounded-full"></span>
+            </div>
+            <span id="music-label" class="text-xs font-medium">Putar Musik Lembut</span>
+        </button>
+    </div>
+
+    <!-- MODAL 1: LIGHTBOX GALERI FOTO -->
+    <div id="photo-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-espresso-900/80 backdrop-blur-sm p-4" onclick="closeModalOnBackdrop(event, 'photo-modal')">
+        <div class="bg-white rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl fade-in">
+            <div class="relative bg-espresso-900">
+                <img id="modal-photo-img" src="" alt="Preview Foto" class="w-full max-h-[70vh] object-contain mx-auto">
+                <button onclick="closeModal('photo-modal')" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center transition cursor-pointer" aria-label="Tutup">
+                    ✕
+                </button>
+            </div>
+            <div class="p-5 sm:p-6">
+                <span id="modal-photo-category" class="inline-block px-3 py-1 rounded-full bg-cream-200 text-terracotta-700 text-xs font-semibold mb-2"></span>
+                <h3 id="modal-photo-title" class="font-serif text-xl font-bold text-espresso-900 mb-1"></h3>
+                <p id="modal-photo-caption" class="text-sm text-espresso-800/85 leading-relaxed"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: POP-UP PESAN LENGKAP SISWA -->
+    <div id="message-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-espresso-900/75 backdrop-blur-sm p-4" onclick="closeModalOnBackdrop(event, 'message-modal')">
+        <div class="bg-cream-50 border border-cream-200 rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative fade-in">
+            <button onclick="closeModal('message-modal')" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-cream-200 hover:bg-terracotta-500 hover:text-white text-espresso-900 flex items-center justify-center transition cursor-pointer" aria-label="Tutup">
+                ✕
+            </button>
+
+            <div class="flex items-center gap-3.5 mb-5">
+                <div id="modal-msg-avatar" class="w-12 h-12 rounded-2xl bg-terracotta-500 text-white font-serif font-bold text-lg flex items-center justify-center shrink-0"></div>
+                <div>
+                    <h3 id="modal-msg-name" class="font-serif text-xl font-bold text-espresso-900"></h3>
+                    <p id="modal-msg-role" class="text-xs font-medium text-sage-800"></p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl p-5 border border-cream-200">
+                <p id="modal-msg-text" class="text-sm sm:text-base text-espresso-900 leading-relaxed whitespace-pre-line"></p>
+            </div>
+
+            <div class="mt-5 text-right">
+                <button onclick="closeModal('message-modal')" class="px-5 py-2 rounded-full bg-espresso-900 text-white text-xs font-semibold hover:bg-espresso-800 transition cursor-pointer">
+                    Tutup Pesan
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3: PANDUAN SIMPAN KENANG-KENANGAN OFFLINE -->
+    <div id="save-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-espresso-900/75 backdrop-blur-sm p-4" onclick="closeModalOnBackdrop(event, 'save-modal')">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative fade-in">
+            <button onclick="closeModal('save-modal')" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-cream-100 hover:bg-cream-200 text-espresso-900 flex items-center justify-center transition cursor-pointer" aria-label="Tutup">
+                ✕
+            </button>
+
+            <div class="w-12 h-12 rounded-2xl bg-sage-100 text-sage-800 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"/>
+                </svg>
+            </div>
+
+            <h3 class="font-serif text-2xl font-bold text-espresso-900 mb-2">Simpan Kenang-Kenangan Selamanya</h3>
+            <p class="text-sm text-espresso-800/80 mb-4 leading-relaxed">
+                Agar halaman beserta seluruh foto dan ucapan kelas ini dapat dibuka kapan saja di laptop atau HP meskipun tanpa koneksi internet:
+            </p>
+
+            <ol class="space-y-3 text-sm text-espresso-900 bg-cream-50 p-4 rounded-2xl border border-cream-200 mb-5">
+                <li class="flex gap-2.5">
+                    <span class="font-bold text-terracotta-600">1.</span>
+                    <span>Unduh paket file website dalam format <strong>.ZIP</strong> melalui tautan unduhan kelas / GitHub.</span>
+                </li>
+                <li class="flex gap-2.5">
+                    <span class="font-bold text-terracotta-600">2.</span>
+                    <span>Ekstrak (<em>Extract Here</em>) file ZIP tersebut ke dalam satu folder di laptop atau penyimpanan HP.</span>
+                </li>
+                <li class="flex gap-2.5">
+                    <span class="font-bold text-terracotta-600">3.</span>
+                    <span>Klik dua kali pada file bernama <strong>index.html</strong> untuk membukanya langsung lewat browser secara offline.</span>
+                </li>
+            </ol>
+
+            <div class="flex flex-col sm:flex-row gap-3 justify-end">
+                <button id="download-zip-btn" type="button" onclick="downloadWebsiteZip()" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-terracotta-500 hover:bg-terracotta-600 text-white text-xs sm:text-sm font-semibold transition cursor-pointer">
+                    <span>Unduh Paket Website (.ZIP)</span>
+                </button>
+                <button onclick="closeModal('save-modal')" class="px-5 py-2.5 rounded-full bg-cream-100 hover:bg-cream-200 text-espresso-900 text-xs sm:text-sm font-medium transition cursor-pointer">
+                    Mengerti
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT MURNI UNTUK DATA, INTERAKSI, AUDIO LEMBUT, DAN UNDUH ZIP -->
+    <script>
+        /* =====================================================================
+           1. DATA FOTO GALERI
+           Cara ganti dengan foto asli:
+           Ubah bagian 'src' menjadi relative path foto di foldermu,
+           contoh: "assets/foto-upacara.jpg"
+        ===================================================================== */
+        const galleryData = [
+            {
+                id: 1,
+                category: "wali-kelas",
+                categoryLabel: "Bareng Wali Kelas",
+                title: "Foto Bersama Setelah Upacara Bendera",
+                caption: "Momen langka semua anak kelas mau baris rapi demi foto bareng wali kelas kesayangan.",
+                src: "https://placehold.co/800x600/E5ECE6/374A3B?text=Foto+Bareng+Wali+Kelas+1"
+            },
+            {
+                id: 2,
+                category: "kelas",
+                categoryLabel: "Momen Kelas",
+                title: "Suasana Jam Kosong di Kelas XI F",
+                caption: "Bukan jam kosong namanya kalau belum diskusi panjang soal masa depan (atau jajanan kantin).",
+                src: "https://placehold.co/800x600/EFE5D4/3D2E27?text=Suasana+Kelas+XI+F"
+            },
+            {
+                id: 3,
+                category: "lomba",
+                categoryLabel: "Kegiatan & Lomba",
+                title: "Perjuangan Classmeeting Semester Ini",
+                caption: "Walau suara habis karena teriak dukung teman, kebersamaannya juara satu.",
+                src: "https://placehold.co/800x600/F7F2E8/8F4630?text=Kegiatan+%26+Lomba"
+            },
+            {
+                id: 4,
+                category: "wali-kelas",
+                categoryLabel: "Bareng Wali Kelas",
+                title: "Makan Bersama Merayakan Ulang Tahun Kelas",
+                caption: "Terima kasih Bapak/Ibu selalu menyempatkan hadir dan ikut meramaikan acara kecil kami.",
+                src: "https://placehold.co/800x600/EFE5D4/291E19?text=Makan+Bersama+Wali+Kelas"
+            },
+            {
+                id: 5,
+                category: "lomba",
+                categoryLabel: "Kegiatan & Lomba",
+                title: "Persiapan Pentas Seni Sekolah",
+                caption: "Latihan mepet deadline tapi tetap kompak sampai hari H tampil di panggung.",
+                src: "https://placehold.co/800x600/E5ECE6/291E19?text=Persiapan+Pentas+Seni"
+            },
+            {
+                id: 6,
+                category: "kelas",
+                categoryLabel: "Momen Kelas",
+                title: "Kerja Bakti Menghias Ruang Kelas",
+                caption: "Saling bantu pasang hiasan dinding supaya kelas makin nyaman dipakai belajar setiap hari.",
+                src: "https://placehold.co/800x600/F7F2E8/3D2E27?text=Menghias+Ruang+Kelas"
+            }
+        ];
+
+        /* =====================================================================
+           2. DATA PESAN & KESAN ANGGOTA KELAS
+           Tinggal tambahkan atau edit objek di dalam array ini untuk semua siswa!
+        ===================================================================== */
+        const studentMessages = [
+            {
+                name: "Aditya Pratama",
+                role: "Ketua Kelas XI F",
+                message: "Terima kasih banyak Bapak/Ibu sudah sabar membimbing saya dan teman-teman selama ini. Setiap kali kelas lagi ribut atau ada masalah, Bapak/Ibu selalu kasih solusi yang tenang dan adil. Sehat selalu ya Pak/Bu!"
+            },
+            {
+                name: "Nabila Azzahra",
+                role: "Sekretaris Kelas",
+                message: "Selamat Hari Guru! Nasihat Bapak/Ibu waktu pembagian rapor kemarin masih sangat saya ingat sampai sekarang. Terima kasih sudah selalu menyemangati kami untuk tidak takut mencoba hal baru."
+            },
+            {
+                name: "Rizky Ramadhan",
+                role: "Anggota Kelas",
+                message: "Maafkan kami yang sering telat mengumpulkan tugas atau bikin kelas ramai. Terima kasih tetap sabar mengajar dan mendidik kami dengan sepenuh hati. Semoga Bapak/Ibu selalu dilimpahkan kebahagiaan."
+            },
+            {
+                name: "Siti Rahmawati",
+                role: "Bendahara Kelas",
+                message: "Punya wali kelas seperti Bapak/Ibu bikin sekolah terasa jauh lebih menyenangkan. Terima kasih sudah menjadi tempat cerita dan selalu peduli sama keadaan murid-muridnya."
+            },
+            {
+                name: "Dimas Saputra",
+                role: "Seksi Kebersihan",
+                message: "Selamat Hari Guru untuk wali kelas terbaik kami! Terima kasih atas semua ilmu, candaan di sela pelajaran, dan perhatian kecil yang bikin kami merasa dihargai di kelas."
+            },
+            {
+                name: "Alya Putri Maharani",
+                role: "Anggota Kelas",
+                message: "Semoga semua kebaikan dan kesabaran Bapak/Ibu dalam membimbing kami dibalas dengan kesehatan, rezeki yang lancar, dan kebahagiaan bersama keluarga. Kami bangga jadi murid Bapak/Ibu!"
+            }
+        ];
+
+        /* =====================================================================
+           3. RENDER GALERI & FILTER KATEGORI
+        ===================================================================== */
+        const galleryGrid = document.getElementById('gallery-grid');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+
+        function renderGallery(filter = 'semua') {
+            galleryGrid.innerHTML = '';
+            const filtered = filter === 'semua' 
+                ? galleryData 
+                : galleryData.filter(item => item.category === filter);
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'group bg-white rounded-2xl overflow-hidden border border-cream-200 shadow-sm hover:shadow-md transition cursor-pointer fade-in flex flex-col';
+                card.onclick = () => openPhotoModal(item);
+
+                card.innerHTML = `
+                    <div class="relative overflow-hidden aspect-[4/3] bg-cream-100">
+                        <img 
+                            src="${item.src}" 
+                            onerror="this.src='https://placehold.co/800x600/EFE5D4/3D2E27?text=Foto+Kenangan'"
+                            alt="${item.title}" 
+                            loading="lazy"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                        >
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-espresso-900 text-xs font-medium shadow-sm">
+                            ${item.categoryLabel}
+                        </span>
+                    </div>
+                    <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-lg text-espresso-900 group-hover:text-terracotta-600 transition mb-1">${item.title}</h3>
+                            <p class="text-xs sm:text-sm text-espresso-800/75 line-clamp-2">${item.caption}</p>
+                        </div>
+                        <div class="mt-3 pt-3 border-t border-cream-100 text-xs font-semibold text-terracotta-600 flex items-center justify-between">
+                            <span>Lihat foto penuh</span>
+                            <span>&nearr;</span>
+                        </div>
+                    </div>
+                `;
+                galleryGrid.appendChild(card);
+            });
+        }
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Reset style semua tombol
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-terracotta-500', 'text-white', 'font-semibold', 'shadow-sm');
+                    b.classList.add('bg-cream-100', 'text-espresso-800', 'font-medium');
+                });
+                // Aktifkan tombol yang diklik
+                btn.classList.remove('bg-cream-100', 'text-espresso-800', 'font-medium');
+                btn.classList.add('bg-terracotta-500', 'text-white', 'font-semibold', 'shadow-sm');
+
+                renderGallery(btn.dataset.filter);
+            });
+        });
+
+        /* =====================================================================
+           4. RENDER KARTU PESAN & PENCARIAN NAMA
+        ===================================================================== */
+        const messagesGrid = document.getElementById('messages-grid');
+        const searchInput = document.getElementById('search-student');
+
+        function getInitials(name) {
+            return name.split(' ').slice(0, 2).map(n => n[0]).join('').toUpperCase();
+        }
+
+        function renderMessages(keyword = '') {
+            messagesGrid.innerHTML = '';
+            const cleanKey = keyword.toLowerCase().trim();
+            const filtered = studentMessages.filter(s => 
+                s.name.toLowerCase().includes(cleanKey) || 
+                s.message.toLowerCase().includes(cleanKey)
+            );
+
+            if (filtered.length === 0) {
+                messagesGrid.innerHTML = `
+                    <div class="col-span-full text-center py-10 text-sm text-espresso-800/70">
+                        Nama siswa "${keyword}" tidak ditemukan.
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(student => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-2xl p-5 sm:p-6 border border-cream-200 shadow-sm hover:shadow-md hover:border-terracotta-500/40 transition cursor-pointer flex flex-col justify-between fade-in';
+                card.onclick = () => openMessageModal(student);
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-sage-100 text-sage-800 font-serif font-bold text-sm flex items-center justify-center shrink-0">
+                                ${getInitials(student.name)}
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm sm:text-base text-espresso-900">${student.name}</h3>
+                                <p class="text-xs text-espresso-800/65">${student.role}</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-espresso-800/90 leading-relaxed line-clamp-3 italic">
+                            "${student.message}"
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-cream-100 flex items-center justify-between text-xs font-semibold text-terracotta-600">
+                        <span>Baca selengkapnya</span>
+                        <span>&rarr;</span>
+                    </div>
+                `;
+                messagesGrid.appendChild(card);
+            });
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            renderMessages(e.target.value);
+        });
+
+        /* =====================================================================
+           5. FUNGSI KONTROL MODAL (POP-UP)
+        ===================================================================== */
+        function openPhotoModal(item) {
+            document.getElementById('modal-photo-img').src = item.src;
+            document.getElementById('modal-photo-category').textContent = item.categoryLabel;
+            document.getElementById('modal-photo-title').textContent = item.title;
+            document.getElementById('modal-photo-caption').textContent = item.caption;
+            showModal('photo-modal');
+        }
+
+        function openMessageModal(student) {
+            document.getElementById('modal-msg-avatar').textContent = getInitials(student.name);
+            document.getElementById('modal-msg-name').textContent = student.name;
+            document.getElementById('modal-msg-role').textContent = student.role;
+            document.getElementById('modal-msg-text').textContent = `"${student.message}"`;
+            showModal('message-modal');
+        }
+
+        function openSaveModal() {
+            showModal('save-modal');
+        }
+
+        function showModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function closeModalOnBackdrop(event, id) {
+            if (event.target.id === id) {
+                closeModal(id);
+            }
+        }
+
+        // Tutup modal dengan tombol Escape di keyboard
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                ['photo-modal', 'message-modal', 'save-modal'].forEach(closeModal);
+            }
+        });
+
+        /* =====================================================================
+           6. MUSIK INSTRUMENTAL LEMBUT (WEB AUDIO API - TANPA FILE EKSTERNAL)
+           Catatan: Jika nanti ingin pakai lagu MP3 lokal, cukup ganti bagian ini
+           dengan elemen <audio id="bgm" src="assets/lagu-hari-guru.mp3" loop></audio>
+        ===================================================================== */
+        let audioCtx = null;
+        let isPlaying = false;
+        let melodyInterval = null;
+        let noteStep = 0;
+
+        // Melodi arpeggio piano lembut bernada hangat (C Major 9 / F Major 7)
+        const softChords = [
+            [261.63, 329.63, 392.00, 493.88], // Cmaj7
+            [220.00, 261.63, 329.63, 392.00], // Am7
+            [174.61, 220.00, 261.63, 329.63], // Fmaj7
+            [196.00, 246.94, 293.66, 392.00]  // G6
+        ];
+
+        function playSoftNote(freq) {
+            if (!audioCtx) return;
+            const now = audioCtx.currentTime;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, now);
+
+            // Amplop suara lembut agar tidak menyentak
+            gain.gain.setValueAtTime(0.0001, now);
+            gain.gain.exponentialRampToValueAtTime(0.035, now + 0.15);
+            gain.gain.exponentialRampToValueAtTime(0.0001, now + 2.2);
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.start(now);
+            osc.stop(now + 2.3);
+        }
+
+        function toggleMusic() {
+            const bars = document.getElementById('music-bars');
+            const label = document.getElementById('music-label');
+
+            if (!isPlaying) {
+                if (!audioCtx) {
+                    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+
+                isPlaying = true;
+                bars.classList.add('playing');
+                label.textContent = 'Musik Aktif';
+
+                // Mainkan nada pertama segera, lalu lanjutkan perlahan
+                const triggerNote = () => {
+                    const chordIndex = Math.floor(noteStep / 4) % softChords.length;
+                    const noteIndex = noteStep % 4;
+                    playSoftNote(softChords[chordIndex][noteIndex]);
+                    noteStep++;
+                };
+
+                triggerNote();
+                melodyInterval = setInterval(triggerNote, 750);
+            } else {
+                isPlaying = false;
+                clearInterval(melodyInterval);
+                bars.classList.remove('playing');
+                label.textContent = 'Putar Musik Lembut';
+            }
+        }
+
+        /* =====================================================================
+           7. PEMBUAT FILE .ZIP MANDIRI UNTUK UNDUH OFFLINE
+        ===================================================================== */
+        const Crc32Table = (() => {
+            const table = new Uint32Array(256);
+            for (let i = 0; i < 256; i++) {
+                let c = i;
+                for (let k = 0; k < 8; k++) {
+                    c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+                }
+                table[i] = c >>> 0;
+            }
+            return table;
+        })();
+
+        function crc32(uint8Array) {
+            let crc = 0xFFFFFFFF;
+            for (let i = 0; i < uint8Array.length; i++) {
+                crc = Crc32Table[(crc ^ uint8Array[i]) & 0xFF] ^ (crc >>> 8);
+            }
+            return (crc ^ 0xFFFFFFFF) >>> 0;
+        }
+
+        function createZipBlob(files) {
+            const encoder = new TextEncoder();
+            const localParts = [];
+            const centralParts = [];
+            let offset = 0;
+
+            for (const file of files) {
+                const nameBytes = encoder.encode(file.name);
+                const dataBytes = typeof file.data === 'string' ? encoder.encode(file.data) : new Uint8Array(file.data);
+                const checksum = crc32(dataBytes);
+
+                const localHeader = new Uint8Array(30 + nameBytes.length);
+                const lv = new DataView(localHeader.buffer);
+                lv.setUint32(0, 0x04034b50, true);
+                lv.setUint16(4, 20, true);
+                lv.setUint16(6, 0x0800, true);
+                lv.setUint16(8, 0, true);
+                lv.setUint16(10, 0, true);
+                lv.setUint16(12, 0x0021, true);
+                lv.setUint32(14, checksum, true);
+                lv.setUint32(18, dataBytes.length, true);
+                lv.setUint32(22, dataBytes.length, true);
+                lv.setUint16(26, nameBytes.length, true);
+                lv.setUint16(28, 0, true);
+                localHeader.set(nameBytes, 30);
+
+                localParts.push(localHeader, dataBytes);
+
+                const centralHeader = new Uint8Array(46 + nameBytes.length);
+                const cv = new DataView(centralHeader.buffer);
+                cv.setUint32(0, 0x02014b50, true);
+                cv.setUint16(4, 20, true);
+                cv.setUint16(6, 20, true);
+                cv.setUint16(8, 0x0800, true);
+                cv.setUint16(10, 0, true);
+                cv.setUint16(12, 0, true);
+                cv.setUint16(14, 0x0021, true);
+                cv.setUint32(16, checksum, true);
+                cv.setUint32(20, dataBytes.length, true);
+                cv.setUint32(24, dataBytes.length, true);
+                cv.setUint16(28, nameBytes.length, true);
+                cv.setUint16(30, 0, true);
+                cv.setUint16(32, 0, true);
+                cv.setUint16(34, 0, true);
+                cv.setUint16(36, 0, true);
+                cv.setUint32(38, 0, true);
+                cv.setUint32(42, offset, true);
+                centralHeader.set(nameBytes, 46);
+
+                centralParts.push(centralHeader);
+                offset += localHeader.length + dataBytes.length;
+            }
+
+            const centralSize = centralParts.reduce((acc, part) => acc + part.length, 0);
+            const eocd = new Uint8Array(22);
+            const ev = new DataView(eocd.buffer);
+            ev.setUint32(0, 0x06054b50, true);
+            ev.setUint16(4, 0, true);
+            ev.setUint16(6, 0, true);
+            ev.setUint16(8, files.length, true);
+            ev.setUint16(10, files.length, true);
+            ev.setUint32(12, centralSize, true);
+            ev.setUint32(16, offset, true);
+            ev.setUint16(20, 0, true);
+
+            return new Blob([...localParts, ...centralParts, eocd], { type: 'application/zip' });
+        }
+
+        async function fetchImageAsBytes(url) {
+            try {
+                const res = await fetch(url, { mode: 'cors' });
+                if (!res.ok) throw new Error('Gagal mengambil gambar');
+                return new Uint8Array(await res.arrayBuffer());
+            } catch (_) {
+                const canvas = document.createElement('canvas');
+                canvas.width = 800;
+                canvas.height = 600;
+                const ctx = canvas.getContext('2d');
+                ctx.fillStyle = '#EFE5D4';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#3D2E27';
+                ctx.font = 'bold 28px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText('Foto Kenangan Kelas XI F', 400, 290);
+                ctx.font = '18px sans-serif';
+                ctx.fillText('Simpan file foto asli ke folder assets/', 400, 330);
+
+                const dataUrl = canvas.toDataURL('image/png');
+                const base64 = dataUrl.split(',')[1];
+                const binary = atob(base64);
+                const bytes = new Uint8Array(binary.length);
+                for (let i = 0; i < binary.length; i++) {
+                    bytes[i] = binary.charCodeAt(i);
+                }
+                return { bytes, ext: 'png' };
+            }
+        }
+
+        async function downloadWebsiteZip() {
+            const btn = document.getElementById('download-zip-btn');
+            const originalHtml = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '<span>Menyiapkan ZIP...</span>';
+
+            try {
+                const zipFiles = [];
+                const heroImg = document.getElementById('hero-photo-img');
+                const heroSrc = heroImg ? heroImg.getAttribute('src') : '';
+
+                let htmlClone = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+                htmlClone = htmlClone.replace('<div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>', '<div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">\n            <!-- Kartu foto akan dirender di sini -->\n        </div>');
+                htmlClone = htmlClone.replace('<div id="messages-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>', '<div id="messages-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">\n                <!-- Kartu ucapan akan dirender dari array JavaScript -->\n            </div>');
+
+                if (heroSrc && !heroSrc.startsWith('assets/')) {
+                    const heroFetched = await fetchImageAsBytes(heroSrc);
+                    const heroBytes = heroFetched.bytes || heroFetched;
+                    const heroExt = heroFetched.ext || 'jpg';
+                    const heroPath = `assets/foto-utama.${heroExt}`;
+                    zipFiles.push({ name: heroPath, data: heroBytes });
+                    htmlClone = htmlClone.split(heroSrc).join(heroPath);
+                }
+
+                for (let i = 0; i < galleryData.length; i++) {
+                    const item = galleryData[i];
+                    if (item.src && !item.src.startsWith('assets/')) {
+                        const fetched = await fetchImageAsBytes(item.src);
+                        const imgBytes = fetched.bytes || fetched;
+                        const imgExt = fetched.ext || 'jpg';
+                        const localPath = `assets/galeri-${i + 1}.${imgExt}`;
+                        zipFiles.push({ name: localPath, data: imgBytes });
+                        htmlClone = htmlClone.split(item.src).join(localPath);
+                    }
+                }
+
+                zipFiles.push({ name: 'index.html', data: htmlClone });
+                zipFiles.push({
+                    name: 'README.txt',
+                    data: [
+                        'PANDUAN MEMBUKA KENANGAN HARI GURU - KELAS XI F',
+                        '================================================',
+                        '1. Ekstrak seluruh isi file .ZIP ini ke satu folder.',
+                        '2. Pastikan folder "assets" tetap berada satu lokasi dengan file "index.html".',
+                        '3. Klik dua kali file "index.html" untuk membukanya di browser (Chrome, Edge, Safari, dll) secara offline.'
+                    ].join('\n')
+                });
+
+                const zipBlob = createZipBlob(zipFiles);
+                const url = URL.createObjectURL(zipBlob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'Kenangan-Hari-Guru-Kelas-XI-F.zip';
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                setTimeout(() => URL.revokeObjectURL(url), 1000);
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalHtml;
+            }
+        }
+
+        // Inisialisasi tampilan saat halaman dimuat
+        window.addEventListener('DOMContentLoaded', () => {
+            renderGallery('semua');
+            renderMessages();
+        });
+    </script>
+</body>
+</html>
